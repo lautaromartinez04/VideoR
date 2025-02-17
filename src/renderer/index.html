@@ -3,12 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>VideoR</title>
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'"
-    />
-    <!-- En tu archivo index.html de la aplicación React (en la carpeta /public o donde esté tu archivo principal) -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; connect-src 'self' http://127.0.0.1:8000;">
+
 
   </head>
   <body>

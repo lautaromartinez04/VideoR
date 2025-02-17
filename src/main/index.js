@@ -38,6 +38,8 @@ if (!gotTheLock) {
       webPreferences: {
         preload: join(__dirname, '../preload/index.js'),
         sandbox: false,
+        webSecurity: false,
+        allowRunningInsecureContent: true,
       },
     });
 
@@ -45,9 +47,8 @@ if (!gotTheLock) {
 
     mainWindow.on('ready-to-show', () => {
       mainWindow.show(); // Muestra la ventana principal
-      if (is.dev) {
-        mainWindow.webContents.openDevTools(); // Abre las DevTools si es en modo desarrollo
-      }
+      
+      mainWindow.webContents.openDevTools(); // Abre las DevTools si es en modo desarrollo
     });
 
     // Maneja los enlaces externos
